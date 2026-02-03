@@ -9,7 +9,7 @@
     body {
       margin: 0;
       height: 100vh;
-      background-image: url("background.jpg");
+      background-image: url("https://raw.githubusercontent.com/ryanmun/Valentines-webpage/main/background.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
@@ -74,11 +74,15 @@
 
   <!-- 🎶 BACKGROUND MUSIC -->
   <audio id="bgMusic" loop>
-    <source src="https://github.com/ryanmun/Valentines-webpage/blob/main/Wale%20Ft.%20Usher%20-%20Matrimony%20(Official%20Audio).mp3" type="audio/mpeg">
+    <source src="https://raw.githubusercontent.com/ryanmun/Valentines-webpage/main/Wale%20Ft.%20Usher%20-%20Matrimony%20(Official%20Audio).mp3" type="audio/mpeg">
   </audio>
 
   <div class="container">
-    <img id="mainImage" src="https://github.com/ryanmun/Valentines-webpage/blob/main/IMG_0578.JPG" alt="Valentine Image" />
+    <img
+      id="mainImage"
+      src="https://raw.githubusercontent.com/ryanmun/Valentines-webpage/main/IMG_0578.JPG"
+      alt="Valentine Image"
+    />
 
     <h1 id="text">
       I know I have asked you already Mi Amor 🥺<br>
@@ -109,19 +113,17 @@
       }
     }
 
-    // Attempt autoplay on load
+    // Try autoplay
     window.addEventListener("load", startMusic);
 
-    // Guaranteed start on first interaction
+    // Guaranteed on interaction
     document.body.addEventListener("click", startMusic, { once: true });
     document.body.addEventListener("touchstart", startMusic, { once: true });
 
     function moveNoButton() {
       startMusic();
-      const x = Math.random() * 220;
-      const y = Math.random() * 60;
-      noBtn.style.left = `${x}px`;
-      noBtn.style.top = `${y}px`;
+      noBtn.style.left = `${Math.random() * 220}px`;
+      noBtn.style.top = `${Math.random() * 60}px`;
     }
 
     noBtn.addEventListener("mouseover", moveNoButton);
@@ -131,9 +133,10 @@
       startMusic();
 
       text.innerHTML = "YAY!! 💕<br>I knew you'd say yes!";
-      image.src = "https://github.com/ryanmun/Valentines-webpage/blob/main/IMG_0652.JPG";
+      image.src = "https://raw.githubusercontent.com/ryanmun/Valentines-webpage/main/IMG_0652.JPG";
 
-      document.body.style.backgroundImage = "url('background_after.jpg')";
+      document.body.style.backgroundImage =
+        "url('https://raw.githubusercontent.com/ryanmun/Valentines-webpage/main/background_after.jpg')";
 
       noBtn.style.display = "none";
       yesBtn.style.display = "none";
